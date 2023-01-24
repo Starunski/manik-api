@@ -23,8 +23,8 @@ app.use("/.netlify/functions/api", router);
 //   res.json({ users: ["tobi", "loki", "jane"] });
 // });
 
-app.use(express.json());
-app.use("/.netlify/functions/api", userRouter);
-app.use("/.netlify/functions/api", postRouter);
+// app.use(express.json());
+// app.use("/.netlify/functions/api", userRouter);
+// app.use("/.netlify/functions/api", postRouter);
 
 module.exports.handler = serverless(app);
