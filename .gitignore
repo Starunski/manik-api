@@ -44,4 +44,5 @@ terraform/.terraform
 .adminjs
 
 # Local Netlify folder
-.netlify
+# .netlify
+functions
