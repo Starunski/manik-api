@@ -17,14 +17,14 @@ console.log("router", router);
 //   console.log("Example app listening on port 5000!");
 // });
 
-app.use("/", router);
+app.use("/.netlify/functions/api", router);
 
 // app.get("/api", (req, res) => {
 //   res.json({ users: ["tobi", "loki", "jane"] });
 // });
 
 app.use(express.json());
-app.use("/", userRouter);
-app.use("/", postRouter);
+app.use("/.netlify/functions/api", userRouter);
+app.use("/.netlify/functions/api", postRouter);
 
 module.exports.handler = serverless(app);

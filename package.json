@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server",
     "dev": "nodemon server",
-    "build": "react-scripts build",
+    "start": "./node_modules/.bin/netlify-lambda serve functions",
+    "build": "./node_modules/.bin/netlify-lambda build functions",
     "build:storybook": "node ./scripts/storybook.js",
     "test:unit": "react-scripts test",
     "test:e2e": "node ./scripts/e2e.test.js",
@@ -21,7 +21,9 @@
   "dependencies": {
     "express": "^4.18.2",
     "netlify-cli": "^12.9.2",
+    "netlify-lambda": "^2.0.15",
     "pg": "^8.8.0",
+    "pg-native": "^3.0.1",
     "serverless-http": "^3.1.1"
   },
   "devDependencies": {
