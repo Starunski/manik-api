@@ -8,7 +8,7 @@ class UserController {
   }
 
   async createUser(req, res) {
-    const { name, surname } = req.body;
+    const { name, surname, email, id } = req.body;
     const newPerson = await db.query(
       `INSERT INTO person (name, surname) VALUES ($1, $2) RETURNING * `,
       [name, surname]
