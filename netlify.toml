@@ -1,5 +1,5 @@
-[build]
-functions = "functions"
-
-[dev]
-  publish = "dist"
+# [build]
+# functions = "functions"
+#
+# [dev]
+#   publish = "dist"

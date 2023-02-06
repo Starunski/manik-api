@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server",
-    "start": "./node_modules/.bin/netlify-lambda serve src",
-    "build": "./node_modules/.bin/netlify-lambda build src",
+    "start": "node server.js",
+    "migrate": "node scripts/migrate.js",
+    "seed": "node scripts/seed.js",
     "build:storybook": "node ./scripts/storybook.js",
     "test:unit": "react-scripts test",
     "test:e2e": "node ./scripts/e2e.test.js",
@@ -20,7 +21,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "knex": "^2.4.2",
     "libpq": "^1.8.12",
+    "morgan": "^1.10.0",
     "netlify-cli": "^12.9.2",
     "netlify-lambda": "^2.0.15",
     "pg": "^8.8.0",
